@@ -10,6 +10,7 @@ import com.pavi2410.googleplayclone.R
 import com.pavi2410.googleplayclone.adapters.ViewPagerAdapter
 import com.pavi2410.googleplayclone.fragments.home.topCharts.TopFreeAppsFragment
 import kotlinx.android.synthetic.main.fragment_top_charts.*
+import kotlinx.android.synthetic.main.fragment_top_charts.view.*
 
 class HomeTopChartsFragment : Fragment() {
 
@@ -18,10 +19,10 @@ class HomeTopChartsFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_top_charts, container, false)
 
-        val viewPager = vp_app_list
+        val viewPager = view.vp_app_list
         setupViewPager(viewPager)
 
-        val subTabLayout = tl_app_list
+        val subTabLayout = view.tl_app_list
         subTabLayout.setupWithViewPager(viewPager)
 
         return view

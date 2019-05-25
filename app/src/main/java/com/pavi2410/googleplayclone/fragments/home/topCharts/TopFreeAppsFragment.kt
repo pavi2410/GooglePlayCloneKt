@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.pavi2410.googleplayclone.R
 import com.pavi2410.googleplayclone.adapters.TopFreeAppsAdapter
 import com.pavi2410.googleplayclone.models.TopFreeAppModel
-import kotlinx.android.synthetic.main.fragment_top_free_apps.*
+import kotlinx.android.synthetic.main.fragment_top_free_apps.view.*
 
 class TopFreeAppsFragment : Fragment() {
 
@@ -20,14 +20,13 @@ class TopFreeAppsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_top_free_apps, container, false)
+        recyclerView = view.rv_top_app_list
         configureMainRecyclerView()
 
         return view
     }
 
     private fun configureMainRecyclerView() {
-        recyclerView = rv_top_app_list
-
         recyclerView.run {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)

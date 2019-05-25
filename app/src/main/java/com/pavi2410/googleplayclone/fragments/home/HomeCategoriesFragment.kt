@@ -13,6 +13,7 @@ import com.pavi2410.googleplayclone.adapters.TopCategoryItemAppAdapter
 import com.pavi2410.googleplayclone.models.AllCategoryItemAppModel
 import com.pavi2410.googleplayclone.models.TopCategoryItemAppModel
 import kotlinx.android.synthetic.main.fragment_categories.*
+import kotlinx.android.synthetic.main.fragment_categories.view.*
 
 class HomeCategoriesFragment : Fragment() {
 
@@ -21,18 +22,18 @@ class HomeCategoriesFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_categories, container, false)
+        topCategoriesRecyclerView = view.rv_top_categories
+        allCategoriesRecyclerView = view.rv_all_categories
         configureRecyclerViews()
 
         return view
     }
 
     private fun configureRecyclerViews() {
-        topCategoriesRecyclerView = rv_top_categories
         topCategoriesRecyclerView.setHasFixedSize(true)
         val horizontalLayoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
         topCategoriesRecyclerView.layoutManager = horizontalLayoutManager
 
-        allCategoriesRecyclerView = rv_all_categories
         allCategoriesRecyclerView.setHasFixedSize(true)
         val verticalLayoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
         allCategoriesRecyclerView.layoutManager = verticalLayoutManager

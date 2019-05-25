@@ -2,6 +2,7 @@ package com.pavi2410.googleplayclone.activities
 
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -33,7 +34,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val searchView = search_view
 
-        searchView.setOnQueryChangeListener { oldQuery, newQuery -> }
+        searchView.setOnQueryChangeListener { oldQuery, newQuery ->
+            Toast.makeText(this, "oldQuery = $oldQuery, newQuery = $newQuery", Toast.LENGTH_SHORT).show()
+        }
 
         drawer = drawer_layout
         val toggle = ActionBarDrawerToggle(

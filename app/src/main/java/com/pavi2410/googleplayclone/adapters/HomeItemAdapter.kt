@@ -17,8 +17,8 @@ class HomeItemAdapter(private val list: List<HomeItemModel>) : RecyclerView.Adap
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
             when (viewType) {
-                1 -> NormalViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_main, parent, false))
                 2 -> PopularViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_popular, parent, false))
+                else -> NormalViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_main, parent, false))
             }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
@@ -78,8 +78,8 @@ class HomeItemAdapter(private val list: List<HomeItemModel>) : RecyclerView.Adap
         }
     }
 
-    override fun getItemViewType(position: Int) = when (list[position].type) {
-        "normal" -> 1
-        "special" -> 2
+    override fun getItemViewType(position: Int) = when {
+        list[position].type == "special" -> 2
+        else -> 1
     }
 }

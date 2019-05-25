@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.pavi2410.googleplayclone.R
 import com.pavi2410.googleplayclone.adapters.HomeItemAdapter
 import com.pavi2410.googleplayclone.models.HomeItemModel
-import kotlinx.android.synthetic.main.fragment_for_you.*
+import kotlinx.android.synthetic.main.fragment_for_you.view.*
 
 class HomeForYouFragment : Fragment() {
 
@@ -19,13 +19,13 @@ class HomeForYouFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_for_you, container, false)
+        recyclerView = view.for_you_recycler_view
         configureMainRecyclerView()
 
         return view
     }
 
     private fun configureMainRecyclerView() {
-        recyclerView = for_you_recycler_view
         recyclerView.run {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
@@ -42,7 +42,7 @@ class HomeForYouFragment : Fragment() {
                 HomeItemModel("Get Stuff Done", "", "normal")
         )
 
-        val homeItemAdapter = HomeItemAdapter(arrayList, context)
+        val homeItemAdapter = HomeItemAdapter(arrayList)
         recyclerView.adapter = homeItemAdapter
 
     }

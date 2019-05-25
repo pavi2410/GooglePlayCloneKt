@@ -29,7 +29,6 @@
         android:id="@+id/homeViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPageGrey"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:background="@color/colorPageGrey" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

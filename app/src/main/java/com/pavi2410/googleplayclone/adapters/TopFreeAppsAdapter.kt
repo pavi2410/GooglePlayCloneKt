@@ -15,13 +15,13 @@ class TopFreeAppsAdapter(private val list: List<TopFreeAppModel>) : RecyclerView
             MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_top_free_app, parent, false))
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bind(list[position])
+        holder.bind(list[position], position)
     }
 
     override fun getItemCount() = list.size
 
     inner class MyViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(model: TopFreeAppModel) = with(view) {
+        fun bind(model: TopFreeAppModel, position: Int) = with(view) {
             Glide.with(context)
                     .load(model.appImage)
                     .into(iv_app_item)

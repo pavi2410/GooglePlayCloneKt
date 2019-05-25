@@ -15,7 +15,7 @@ import com.pavi2410.googleplayclone.adapters.ViewPagerAdapter
 import com.pavi2410.googleplayclone.fragments.home.HomeCategoriesFragment
 import com.pavi2410.googleplayclone.fragments.home.HomeForYouFragment
 import com.pavi2410.googleplayclone.fragments.home.HomeTopChartsFragment
-import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
 
@@ -26,10 +26,10 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        val viewPager = homeViewPager
+        val viewPager = view.homeViewPager
         setupViewPager(viewPager)
 
-        subTabLayout = sub_tabs
+        subTabLayout = view.sub_tabs
         subTabLayout.setupWithViewPager(viewPager)
         setupTabIcons()
 
