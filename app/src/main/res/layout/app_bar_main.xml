@@ -35,7 +35,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.pushpal.googleplayclone.viewPager.CustomViewPager
+    <com.pavi2410.googleplayclone.viewPager.CustomViewPager
         android:id="@+id/mainViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
