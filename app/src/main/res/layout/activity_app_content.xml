@@ -71,7 +71,7 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_install"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
             android:visibility="gone"
             android:weightSum="2">
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_uninstall"
                 android:layout_width="0dp"
                 android:layout_height="38dp"
@@ -153,7 +153,7 @@
                 android:text="@string/button_uninstall"
                 android:theme="@style/AppTheme.UninstallButton" />
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_open"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -384,7 +384,7 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_app_screenshots"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
